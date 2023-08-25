@@ -4,10 +4,14 @@ import cardsData from './constants';
 class View {
   constructor() {
     this.dataArray = [];
+    this.citiesArray = Array.from(new Set(cardsData.map((it) => it.cityId)));
   }
 
   defineRegion() {
-    const id = localStorage.getItem('siteId') || 'siteMSK';
+    let id = localStorage.getItem('siteId');
+    if (!id || !this.citiesArray.includes(id)) {
+      id = 'siteMSK';
+    }
     return id;
   }
 
@@ -18,7 +22,6 @@ class View {
 
   render() {
     this.filterDataArray();
-    console.log(this.dataArray);
     const src = require('../../img/icons/location.svg');
     return html`
     ${this.dataArray.map((it, index) => html`

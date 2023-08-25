@@ -1,6 +1,7 @@
 .section--exchange {
   position: relative;
   .section-layer {
+    padding-top: 2.4rem;
     padding-bottom: 14rem;
   }
   .section__content {
@@ -126,10 +127,12 @@
     .box-pic {
       bottom: auto;
       top: 2rem;
-      max-width: 52rem;
+      width: 52rem;
+      max-width: 50%;
       min-height: 52rem;
-      margin-left: 10rem;
+      margin-left: 10%;
     }
+    
     .pic-layer {
       position: absolute;
       img {

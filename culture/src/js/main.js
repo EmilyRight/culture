@@ -1,15 +1,11 @@
 import $ from 'jquery';
 import { WOW } from './vendor/wow.min';
 import detectDevice from './components/detectDevice';
-import Swiper from './vendor/swiper.min';
-import { closeModal, openModal } from './components/modal';
-import {
-  fieldListener, validateFields, keyField, prepField,
-} from './components/inputs';
-import generateId from './components/utils';
+
 import GTMEvents from './components/gtmEvents';
-import regionsData from './regionsData';
 import View from './museums/View';
+import createSlider from './components/sliderFunctions';
+import { chooseRegion, handleRegionModal, showRegion } from './components/regionFunctions';
 
 const GTM = new GTMEvents();
 const view = new View();
@@ -22,11 +18,9 @@ window.addEventListener('load', () => {
   GTM.addEventListeners();
   goNextSection();
   showRegion();
-  createSlider();
-
+  createSlider(view);
   handleRegionModal();
   chooseRegion();
-
   scrollTeaser(document.querySelector('.teaser-next'));
 });
 
@@ -77,7 +71,7 @@ function faqOpener() {
   const activeClassName = 'active';
   itemsList.forEach((item) => {
     item.addEventListener('click', () => {
-      const itemText = item.childNodes[3]; // хардкод текстового дочернего узла
+      const itemText = item.querySelector('.item__text');
       if (item.classList.contains(activeClassName)) {
         itemText.style.transition = 'none';
         item.classList.remove(activeClassName);
@@ -88,77 +82,4 @@ function faqOpener() {
       }
     });
   });
-}
-
-function showRegion() {
-  const id = localStorage.getItem('siteId') || 'siteMSK';
-  console.log(id);
-  const regionName = regionsData.find(({ siteId }) => siteId === id)?.name;
-  const regionSpan = document.querySelectorAll('.js-regionFullName');
-  regionSpan.forEach((it) => {
-    it.innerHTML = `${regionName}`;
-  });
-  localStorage.setItem('siteId', id);
-}
-
-function setRegion(cityCode) {
-  localStorage.setItem('siteId', cityCode);
-}
-
-function chooseRegion() {
-  const regionsList = document.querySelectorAll('.js-set-city');
-  regionsList.forEach((region) => {
-    region.addEventListener('click', () => {
-      const cityCode = region.getAttribute('data-area');
-      setRegion(cityCode);
-      showRegion();
-      closeModal('#region-modal-box');
-      createSlider();
-    });
-  });
-}
-
-function handleRegionModal() {
-  const chooseRegionButton = document.querySelectorAll('.js-show-region-modal');
-  const regionsList = document.querySelectorAll('.js-set-city');
-
-  chooseRegionButton.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      console.log('hey');
-      openModal('#region-modal-box');
-    });
-  });
-
-  regionsList.forEach((region) => {
-    region.addEventListener('click', () => {
-      closeModal('#region-modal-box');
-    });
-  });
-}
-
-function createSlider() {
-  const slider = document.querySelector('.swiper-wrapper');
-  slider.innerHTML = view.render();
-  handleSlider();
-}
-function handleSlider() {
-  const swiper = new Swiper('.swiper-container', {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 'auto',
-    spaceBetween: 25,
-    loop: false,
-    breakpoints: {
-      768: {
-        spaceBetween: 16,
-      },
-    },
-  });
-  return swiper;
 }

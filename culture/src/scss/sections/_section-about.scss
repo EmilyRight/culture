@@ -12,6 +12,8 @@
     overflow: hidden;
   }
   .box-content {
+    position: relative;
+    z-index: 10;
     &__text {
       color: #fff;
       text-align: left;
