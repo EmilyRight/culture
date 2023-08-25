@@ -1,0 +1,83 @@
+.section--faq {
+  .section-layer {
+    padding-top: 0;
+    display: flex;
+  }
+
+  .section-title {
+    font-size: 3.8rem;
+    line-height: 4.4rem;
+    margin-bottom: 1.8rem;
+    text-align: center;
+  }
+
+  .item {
+    color: #000;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    margin-bottom: 1.8rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 40px;
+    position: relative;
+    padding: 1.8rem 1.8rem 1.8rem 2.4rem;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 1.9rem;
+      line-height: 2.6rem;
+      user-select: none;
+      font-weight: 700;
+      flex-basis: 85%;
+    }
+
+    &__close-icon {
+      width: 1.95rem;
+      position: relative;
+      user-select: none;
+    }
+
+    &__text {
+      overflow: hidden;
+      box-sizing: border-box;
+      max-height: 0;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+    &.active {
+      .item__close-icon {
+        transform: rotateX(180deg);
+      }
+      .item__text {
+        max-height: 100rem;
+        padding-top: 1.8rem;
+        opacity: 1;
+      }
+    }
+  }
+  .subtitle {
+  }
+  .small-text {
+    @include text-main;
+  }
+
+  @media (min-width: 600px) {
+    .section-title {
+      font-size: 4.8rem;
+      line-height: 5.4rem;
+      margin-bottom: 3.4rem;
+    }
+    .item {
+      padding: 2.7rem;
+      &__title {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+      }
+    }
+  }
+}
