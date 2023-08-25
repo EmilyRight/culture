@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import regionsData from '../regionsData';
 import { closeModal, openModal } from './modal';
 import createSlider from './sliderFunctions';
@@ -16,7 +17,7 @@ function setRegion(cityCode) {
   localStorage.setItem('siteId', cityCode);
 }
 
-function chooseRegion(view) {
+function chooseRegion() {
   const regionsList = document.querySelectorAll('.js-set-city');
   regionsList.forEach((region) => {
     region.addEventListener('click', () => {
@@ -24,7 +25,7 @@ function chooseRegion(view) {
       setRegion(cityCode);
       showRegion();
       closeModal('#region-modal-box');
-      createSlider(view);
+      createSlider();
     });
   });
 }

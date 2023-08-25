@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import { html } from './SafeHtml';
 import cardsData from './constants';
 

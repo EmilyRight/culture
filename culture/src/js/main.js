@@ -8,7 +8,8 @@ import createSlider from './components/sliderFunctions';
 import { chooseRegion, handleRegionModal, showRegion } from './components/regionFunctions';
 
 const GTM = new GTMEvents();
-const view = new View();
+const sliderView = new View();
+
 window.jQuery = window.$ = $;
 /// /////// DocReady //////////
 window.addEventListener('load', () => {
@@ -18,7 +19,7 @@ window.addEventListener('load', () => {
   GTM.addEventListeners();
   goNextSection();
   showRegion();
-  createSlider(view);
+  createSlider(sliderView);
   handleRegionModal();
   chooseRegion();
   scrollTeaser(document.querySelector('.teaser-next'));
@@ -83,3 +84,5 @@ function faqOpener() {
     });
   });
 }
+
+export default sliderView;

@@ -1,8 +1,10 @@
+/* eslint-disable import/no-cycle */
+import sliderView from '../main';
 import Swiper from '../vendor/swiper.min';
 
-function createSlider(view) {
+function createSlider() {
   const slider = document.querySelector('.swiper-wrapper');
-  slider.innerHTML = view.render();
+  slider.innerHTML = sliderView.render();
   handleSlider();
 }
 
