@@ -26,7 +26,7 @@ class View {
     const src = require('../../img/icons/location.svg');
     return html`
     ${this.dataArray.map((it, index) => html`
-    <div class="swiper-slide slide">
+    <div class="swiper-slide slide" data-hash="slide${index}">
       <div class="slide__text">
         <h3 class="slide__title">${it.title}</h3>
         <p class="slide__text">
@@ -51,7 +51,8 @@ class View {
           >
         </div>
       </div>
-    </div>`)}
+    </div>
+    `)}
    `;
   }
 }

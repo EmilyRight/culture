@@ -2,6 +2,12 @@
 import sliderView from '../main';
 import Swiper from '../vendor/swiper.min';
 
+// function createSlider() {
+//   const slider = document.querySelector('.swiper-wrapper');
+//   slider.innerHTML = sliderView.render();
+//   handleSlider();
+// }
+
 function createSlider() {
   const slider = document.querySelector('.swiper-wrapper');
   slider.innerHTML = sliderView.render();
@@ -10,6 +16,9 @@ function createSlider() {
 
 function handleSlider() {
   const swiper = new Swiper('.swiper-container', {
+    hashNavigation: {
+      watchState: true,
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -27,6 +36,12 @@ function handleSlider() {
       },
     },
   });
+
+  // swiper.on('slideChange', () => {
+  //   swiper.pagination.render();
+  //   swiper.pagination.update();
+  // });
+
   return swiper;
 }
 
