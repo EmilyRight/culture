@@ -12,6 +12,7 @@ import Swiper from '../vendor/swiper.min';
 function createSlider() {
   const slider = document.querySelector('.swiper-wrapper');
   const sliderView = new View();
+  console.log(sliderView);
   slider.innerHTML = sliderView.render();
   handleSlider();
 }

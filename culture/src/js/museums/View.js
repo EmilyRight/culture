@@ -4,8 +4,9 @@ import cardsData from './constants';
 
 class View {
   constructor() {
-    this.dataArray = [];
     this.citiesArray = Array.from(new Set(cardsData.map((it) => it.cityId)));
+    this.region = this.defineRegion();
+    this.dataArray = cardsData.filter((it) => it.cityId === this.region);
   }
 
   defineRegion() {
@@ -16,14 +17,9 @@ class View {
     return id;
   }
 
-  filterDataArray() {
-    const region = this.defineRegion();
-    this.dataArray = cardsData.filter((it) => it.cityId === region);
-  }
-
   render() {
-    this.filterDataArray();
     const src = require('../../img/icons/location.svg');
+    console.log(src);
     return html`
     ${this.dataArray.map((it, index) => html`
     <div class="swiper-slide" data-hash="slide${index}">
@@ -37,7 +33,7 @@ class View {
         <div class="slide__btns">
           <a
           href="https://tele2.ru/minutes-management"
-          class="slide__btn btn btn-primary"
+          class="slide__btn btn btn-primary js-gtm-event"
           data-event="conv_offer${index + 1}"
           target="_blank"
           >Получить билет</a
