@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import { html } from './SafeHtml';
-import cardsData from './constants';
+import cardsData from '../constants/cardsData';
 
 class View {
   constructor() {
@@ -18,7 +18,13 @@ class View {
   }
 
   render() {
-    const src = require('../../img/icons/location.svg');
+    let src = require('../../img/icons/location.svg');
+    if (src.endsWith('/')) {
+      src = src.slice(0, -1);
+    }
+    const slider = document.querySelector('.swiper-wrapper');
+    const sliderView = new View();
+    slider.innerHTML = sliderView.render();
     console.log(src);
     return html`
     ${this.dataArray.map((it, index) => html`

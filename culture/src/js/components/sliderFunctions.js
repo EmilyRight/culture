@@ -3,12 +3,6 @@
 import View from '../museums/View';
 import Swiper from '../vendor/swiper.min';
 
-// function createSlider() {
-//   const slider = document.querySelector('.swiper-wrapper');
-//   slider.innerHTML = sliderView.render();
-//   handleSlider();
-// }
-
 function createSlider() {
   const slider = document.querySelector('.swiper-wrapper');
   const sliderView = new View();
@@ -39,12 +33,7 @@ function handleSlider() {
       },
     },
   });
-
-  // swiper.on('slideChange', () => {
-  //   swiper.pagination.render();
-  //   swiper.pagination.update();
-  // });
-
+  console.log(swiper);
   return swiper;
 }
 

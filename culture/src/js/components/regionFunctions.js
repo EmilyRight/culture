@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import regionsData from '../regionsData';
+import regionsData from '../constants/regionsData';
 import { closeModal, openModal } from './modal';
 import createSlider from './sliderFunctions';
 

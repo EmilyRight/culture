@@ -3,18 +3,16 @@ import { WOW } from './vendor/wow.min';
 import detectDevice from './components/detectDevice';
 
 import GTMEvents from './components/gtmEvents';
-import View from './museums/View';
 import createSlider from './components/sliderFunctions';
 import { chooseRegion, handleRegionModal, showRegion } from './components/regionFunctions';
 
 const GTM = new GTMEvents();
 
-window.jQuery = window.$ = $;
 /// /////// DocReady //////////
 window.addEventListener('load', () => {
   detectDevice(); // videoTeaser();
   new WOW().init();
-  faqOpener();
+  handleFaqOpening();
   GTM.addEventListeners();
   goNextSection();
   showRegion();
@@ -56,6 +54,7 @@ function scrollTeaser(el) {
   }
 }
 
+// handle FAQ opening
 function setActive(arr) {
   const activeClassName = 'active';
   arr.forEach((el) => {
@@ -67,7 +66,7 @@ function setActive(arr) {
   });
 }
 
-function faqOpener() {
+function handleFaqOpening() {
   const itemsList = document.querySelectorAll('.faq__item');
   const activeClassName = 'active';
   itemsList.forEach((item) => {
