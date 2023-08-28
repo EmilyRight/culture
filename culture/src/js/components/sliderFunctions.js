@@ -1,5 +1,6 @@
 /* eslint-disable import/no-cycle */
-import sliderView from '../main';
+// import sliderView from '../main';
+import View from '../museums/View';
 import Swiper from '../vendor/swiper.min';
 
 // function createSlider() {
@@ -10,6 +11,7 @@ import Swiper from '../vendor/swiper.min';
 
 function createSlider() {
   const slider = document.querySelector('.swiper-wrapper');
+  const sliderView = new View();
   slider.innerHTML = sliderView.render();
   handleSlider();
 }
@@ -28,7 +30,7 @@ function handleSlider() {
       prevEl: '.swiper-button-prev',
     },
     slidesPerView: 'auto',
-    spaceBetween: 25,
+    spaceBetween: 24,
     loop: false,
     breakpoints: {
       768: {

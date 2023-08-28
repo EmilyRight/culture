@@ -8,7 +8,6 @@ import createSlider from './components/sliderFunctions';
 import { chooseRegion, handleRegionModal, showRegion } from './components/regionFunctions';
 
 const GTM = new GTMEvents();
-const sliderView = new View();
 
 window.jQuery = window.$ = $;
 /// /////// DocReady //////////
@@ -19,7 +18,7 @@ window.addEventListener('load', () => {
   GTM.addEventListeners();
   goNextSection();
   showRegion();
-  createSlider(sliderView);
+  createSlider();
   handleRegionModal();
   chooseRegion();
   scrollTeaser(document.querySelector('.teaser-next'));
@@ -60,13 +59,14 @@ function scrollTeaser(el) {
 function setActive(arr) {
   const activeClassName = 'active';
   arr.forEach((el) => {
-    const itemText = el.childNodes[3]; // хардкод текстового дочернего узла
+    const itemText = el.querySelector('.item__text');
     if (el.classList.contains(activeClassName)) {
       itemText.style.transition = 'none';
       el.classList.remove(activeClassName);
     }
   });
 }
+
 function faqOpener() {
   const itemsList = document.querySelectorAll('.faq__item');
   const activeClassName = 'active';
@@ -84,5 +84,3 @@ function faqOpener() {
     });
   });
 }
-
-export default sliderView;

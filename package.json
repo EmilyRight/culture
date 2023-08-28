@@ -37,6 +37,7 @@
     "sharp": "^0.31.3"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "animejs": "^3.2.1",
     "aos": "2.3.4",
     "gsap": "^3.10.4",
