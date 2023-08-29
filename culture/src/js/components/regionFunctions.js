@@ -1,11 +1,11 @@
 /* eslint-disable no-param-reassign */
-import regionsData from '../constants/regionsData';
+import citiesData from '../constants/citiesData';
 import { closeModal, openModal } from './modal';
 import { createSlider, destroySlider } from './sliderFunctions';
 
 function showRegion() {
   const id = localStorage.getItem('siteId') || 'siteMSK';
-  const regionName = regionsData.find(({ siteId }) => siteId === id)?.name;
+  const regionName = citiesData.find(({ siteId }) => siteId === id)?.name;
   const regionSpan = document.querySelectorAll('.js-regionFullName');
   regionSpan.forEach((it) => {
     it.innerHTML = `${regionName}`;

@@ -33,6 +33,23 @@ function createSlider() {
   slider.innerHTML = sliderView.render();
   swiper = new Swiper('.swiper-container', options);
   swiper.init();
+  hideNavButtons(sliderView);
+}
+
+/**
+ * @param {View} view
+ */
+
+function hideNavButtons(view) {
+  const sliderElementsNumber = view.getDataArrayLength();
+  const navButtons = document.querySelectorAll('.swiper-button');
+  navButtons.forEach((btn) => {
+    if (sliderElementsNumber < 4) {
+      btn.style.display = 'none';
+    } else {
+      btn.style.display = 'flex';
+    }
+  });
 }
 
 function destroySlider() {

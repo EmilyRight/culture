@@ -9,6 +9,10 @@ class View {
     this.dataArray = cardsData.filter((it) => it.cityId === this.region);
   }
 
+  getDataArrayLength() {
+    return this.dataArray.length;
+  }
+
   defineRegion() {
     let id = localStorage.getItem('siteId');
     if (!id || !this.citiesArray.includes(id)) {
