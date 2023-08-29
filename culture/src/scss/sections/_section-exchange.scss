@@ -132,7 +132,7 @@
       min-height: 52rem;
       margin-left: 10%;
     }
-    
+
     .pic-layer {
       position: absolute;
       img {
@@ -144,7 +144,8 @@
         max-width: 90%;
         bottom: auto;
         top: 10%;
-        left: -5%;
+        left: auto;
+        right: 15%;
       }
 
       &_bg {

@@ -68,7 +68,8 @@
     }
     .box-pic {
       min-height: auto;
-      bottom: -4rem;
+      bottom: -8rem;
+      right: -0rem;
       width: 40%;
     }
     .pic-layer {
@@ -79,9 +80,9 @@
       img {
         position: absolute;
         bottom: -0rem;
-        right: -2rem;
+        right: 0;
         display: block;
-        max-width: 110%;
+        max-width: 100%;
         transform: none;
         filter: none;
       }
