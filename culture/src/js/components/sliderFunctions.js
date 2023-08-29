@@ -43,13 +43,23 @@ function createSlider() {
 function hideNavButtons(view) {
   const sliderElementsNumber = view.getDataArrayLength();
   const navButtons = document.querySelectorAll('.swiper-button');
-  navButtons.forEach((btn) => {
-    if (sliderElementsNumber < 4) {
-      btn.style.display = 'none';
+  const pagination = document.querySelector('.swiper-pagination');
+  if (window.innerWidth >= 600) {
+    navButtons.forEach((btn) => {
+      if (sliderElementsNumber < 4) {
+        btn.style.display = 'none';
+      } else {
+        btn.style.display = 'flex';
+      }
+    });
+  }
+  if (window.innerWidth < 600) {
+    if (sliderElementsNumber === 1) {
+      pagination.style.display = 'none';
     } else {
-      btn.style.display = 'flex';
+      pagination.style.display = 'block';
     }
-  });
+  }
 }
 
 function destroySlider() {

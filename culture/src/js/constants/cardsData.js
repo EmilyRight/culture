@@ -3,123 +3,122 @@ const cardsData = [
     cityId: 'siteMSK',
     title: 'Царь-макет',
     description: 'Самый большой в Москве интерактивный макет России.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjIW0B',
   },
 
   {
     cityId: 'siteMSK',
     title: 'Музей Lego Megabricks',
     description: 'Экспонаты, созданные из популярного конструктора Lego.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjI8JK',
   },
 
   {
     cityId: 'siteMSK',
     title: 'Музей русского импрессионизма',
     description: 'Картины выдающихся российских художников.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjI8P~',
   },
 
   {
     cityId: 'siteMSK',
     title: 'Музей Музыки',
     description: 'Одна из старейших музыкальных коллекций мира.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjIHiN',
   },
 
   {
     cityId: 'siteMSK',
     title: 'Пушкинский музей',
     description: 'Экспонаты постоянной экспозиции Главного здания.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CXXKrmB',
   },
 
   // spb
 
   {
     cityId: 'siteSPB',
-    title: 'Музей «Эрарта»',
+    title: 'Музей Эрарта',
     description: 'Живопись, графика, скульптура и другие виды современного искусства.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjIGo2',
   },
   {
     cityId: 'siteSPB',
     title: 'Музей Фаберже',
     description: 'Шедевры ювелирного искусства Карла Фаберже — и не только.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjIOOT',
   },
   {
     cityId: 'siteSPB',
-    title: 'Шоу-музей «Гранд Макет Россия»',
+    title: 'Гранд Макет Россия',
     description: 'Самый большой макет России в мире — площадью 800 кв. м.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjISzH',
   },
 
   // NN6
   {
     cityId: 'siteNNOV',
-    title: 'НГХМ. История ХХ века',
+    title: 'НГХМ. Искусство ХХ века',
     description: 'Произведения современного искусства.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMAoB',
   },
 
   {
     cityId: 'siteNNOV',
     title: 'НГХМ. Русское искусство',
     description: 'Произведения разных периодов развития национальной культуры.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMIOd',
   },
 
   {
     cityId: 'siteNNOV',
-    title: 'Музей детства А.М.Горького «Домик Каширина»',
+    title: 'Музей «Домик Каширина»',
     description: 'Место, связанное с детскими годами великого писателя.',
-    adress: 'Место, связанное с детскими годами великого писателя.',
+    adress: 'https://yandex.ru/maps/-/CDQjMQ60',
   },
 
   {
     cityId: 'siteNNOV',
     title: 'Музей-квартира А.М.Горького',
     description: 'Уникальная экспозиция из 1500 подлинных экспонатов.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMYLp',
   },
 
   // Казань
 
   {
     cityId: 'siteKAZAN',
-    title: 'Галерея современного искусства ГМИИ РТ',
+    title: 'Музей изобразительных искусств РТ',
     description: 'Центр художественной жизни Казани.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMJ6B',
   },
 
   {
     cityId: 'siteKAZAN',
     title: 'Центр «Эрмитаж-Казань»',
-
     description: 'Первое представительство Государственного Эрмитажа в России.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMNMD',
   },
 
   {
     cityId: 'siteKAZAN',
-    title: 'Национальный музей Республики Татарстан',
+    title: 'Национальный музей РТ',
     description: 'Главное музейное хранилище республики.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMRKv',
   },
 
   {
     cityId: 'siteKAZAN',
     title: 'Музей естественной истории Татарстана',
     description: 'Коллекции из разных областей геологических знаний.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjM62U',
   },
 
   {
     cityId: 'siteKAZAN',
-    title: 'Центр цифрового искусства Artplay Media',
+    title: 'Центр Artplay Media',
     description: 'Увлекательные выставки в интерактивном формате.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMG~n',
   },
 
   // Екатеринбург
@@ -127,21 +126,21 @@ const cardsData = [
     cityId: 'siteEKT',
     title: 'Культурно-просветительский центр «Эрмитаж-Урал»',
     description: 'Западноевропейское искусство, искусство фарфора и другие экспозиции.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMOYQ',
   },
 
   {
     cityId: 'siteEKT',
     title: 'Музей истории Екатеринбурга',
     description: 'От завода — к городу: все о Екатеринбурге, его жителях и быте.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMO9M',
   },
 
   {
     cityId: 'siteEKT',
-    title: 'Музей В. Высоцкого',
+    title: 'Музей В. Высоцкого',
     description: 'Восстановленный гостиничный номер с личными вещами артиста.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjM8Oz',
   },
 
   // КРАСНОЯРСК
@@ -150,14 +149,14 @@ const cardsData = [
     cityId: 'siteKRASNOYARSK',
     title: '«Ньютон Парк»',
     description: 'Интерактивный музей науки для всей семьи.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMDLu',
   },
 
   {
     cityId: 'siteKRASNOYARSK',
     title: 'Музейный центр «Площадь Мира»',
     description: 'Крупнейшая в Сибири выставочная площадка современного искусства.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMH8K',
   },
 
   // Тула
@@ -166,7 +165,7 @@ const cardsData = [
     cityId: 'siteTULA',
     title: 'Кластер «Октава»',
     description: 'Выставочное и креативное пространство с лекциями, мастер-классами, музыкальными и другими мероприятиями.',
-    adress: '',
+    adress: 'https://yandex.ru/maps/-/CDQjMLZO',
   },
 
 ];

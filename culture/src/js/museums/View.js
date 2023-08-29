@@ -22,11 +22,6 @@ class View {
   }
 
   render() {
-    let markSrc = require('../../img/icons/location.svg');
-    if (markSrc.endsWith('/')) {
-      markSrc = markSrc.slice(0, -1);
-    }
-
     return html`
 
       ${this.dataArray.map((it, index) => html`
@@ -46,7 +41,9 @@ class View {
             >Получить билет</a
             >
             <div class="slide__map map link">
-              <img alt="" src=${markSrc.endsWith('/') ? markSrc.slice(0, -1) : markSrc}/>
+              <svg width="15px" height="15px">
+                <use xlink:href="#location"></use>
+              </svg>
               <a
                 class="map__link"
                 data-event="address"

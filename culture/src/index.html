@@ -196,6 +196,15 @@
             fill="currentColor"
           />
         </g>
+        <g id="location">
+          <path
+            id="Subtract"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M9.29777 13.3879C12.2655 9.71519 13.1998 8.559 13.1998 6.0823C13.1998 3.27543 10.8717 1 7.9998 1C5.12792 1 2.7998 3.27543 2.7998 6.0823C2.7998 8.55898 3.73408 9.71517 6.70174 13.3877C7.09742 13.8774 7.52923 14.4118 7.9998 15C8.47034 14.4118 8.90212 13.8775 9.29777 13.3879ZM7.9998 8.8C9.43575 8.8 10.5998 7.63594 10.5998 6.2C10.5998 4.76406 9.43575 3.6 7.9998 3.6C6.56386 3.6 5.3998 4.76406 5.3998 6.2C5.3998 7.63594 6.56386 8.8 7.9998 8.8Z"
+            fill="#1F2229"
+          />
+        </g>
       </svg>
     </div>
     <div class="page">
@@ -272,12 +281,9 @@
               <div class="box-content" data-region="msk">
                 <div class="box-content__text">
                   <p>
-                    Меняйте минуты Tele2&nbsp;на билеты в&nbsp;музеи
-                    и&nbsp;вдохновляйтесь искусством!
-                  </p>
-                  <p>
-                    И&nbsp;неважно, откуда вы&nbsp;&mdash; билеты за&nbsp;минуты
-                    доступны абонентам из&nbsp;любых регионов.
+                    Неважно, откуда&nbsp;вы,&nbsp;&mdash; билеты в&nbsp;музеи
+                    за&nbsp;минуты Tele2 доступны абонентам из&nbsp;любых
+                    регионов.
                   </p>
                 </div>
 
@@ -308,16 +314,16 @@
               <div class="section-layer">
                 <h2 class="box-content__title">Музеи за&nbsp;минуты</h2>
                 <div class="box-content__region selected-region link">
-                  <div class="selected-region__region-name">
-                    <img
-                      alt=""
-                      class="selected-region__icon"
-                      src="./img/icons/location.svg"
-                    />
+                  <div
+                    class="selected-region__region-name js-gtm-event"
+                    data-event="regions"
+                  >
+                    <svg width="15px" height="15px">
+                      <use xlink:href="#location"></use>
+                    </svg>
                     <span
                       class="js-regionFullName selected-region__name js-show-region-modal"
-                      >Санкт-Петербург и Ленинградская область</span
-                    >
+                    ></span>
                   </div>
                 </div>
               </div>
@@ -362,8 +368,22 @@
                 </h2>
                 <div class="box-content__text">
                   <p>
-                    Меняйте минуты в&nbsp;личном кабинете на&nbsp;сайте или
-                    в&nbsp;мобильном приложении &laquo;Мой Tele2&raquo;.
+                    Меняйте минуты в&nbsp;личном кабинете
+                    <a
+                      class="js-gtm-event link"
+                      href="https://tele2.ru/minutes-management"
+                      data-event="text-link_site-change"
+                      target="_blank"
+                      >на&nbsp;сайте</a
+                    >
+                    или в&nbsp;мобильном приложении
+                    <a
+                      class="js-gtm-event link"
+                      href="https://redirect.appmetrica.yandex.com/serve/388563671611160636?utm_medium=text_link1&utm_campaign=culture"
+                      data-event="text-link_app-change"
+                      target="_blank"
+                      >&laquo;Мой Tele2&raquo;</a
+                    >.
                   </p>
                   <p>
                     А&nbsp;если вы&nbsp;еще не&nbsp;с&nbsp;нами&nbsp;&mdash;
@@ -419,7 +439,7 @@
                 </h2>
               </div>
               <div class="faq__content">
-                <div class="faq__item item">
+                <div class="faq__item item js-gtm-event" data-event="faq1">
                   <div class="item__header">
                     <div class="item__title subtitle">
                       В&nbsp;музеи каких городов я&nbsp;могу сходить
@@ -444,7 +464,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="faq__item item">
+                <div class="faq__item item js-gtm-event" data-event="faq2">
                   <div class="item__header">
                     <div class="item__title subtitle">
                       Как воспользоваться предложением по&nbsp;обмену минут
@@ -460,13 +480,28 @@
                     <p class="small-text">
                       Нужно быть абонентом Tele2 из&nbsp;любого региона России.
                       Обменять минуты на&nbsp;билеты можно в&nbsp;личном
-                      кабинете на&nbsp;сайте или в&nbsp;приложении &laquo;Мой
-                      Tele2&raquo;&nbsp;&mdash; вы&nbsp;получите промокод
-                      и&nbsp;сможете применить его, следуя инструкциям.
+                      кабинете
+                      <a
+                        class="js-gtm-event link"
+                        href="https://tele2.ru/minutes-management"
+                        data-event="text-link_site-faq"
+                        target="_blank"
+                        >на&nbsp;сайте</a
+                      >
+                      или в&nbsp;приложении
+                      <a
+                        class="js-gtm-event link"
+                        href="https://redirect.appmetrica.yandex.com/serve/388563671611160636?utm_medium=text_link2&utm_campaign=culture"
+                        data-event="text-link_app-faq"
+                        target="_blank"
+                        >&laquo;Мой Tele2&raquo;
+                      </a>
+                      &nbsp;&mdash; вы&nbsp;получите промокод и&nbsp;сможете
+                      применить его, следуя инструкциям.
                     </p>
                   </div>
                 </div>
-                <div class="faq__item item">
+                <div class="faq__item item js-gtm-event" data-event="faq3">
                   <div class="item__header">
                     <div class="item__title subtitle">
                       Есть&nbsp;ли какие-нибудь ограничения по&nbsp;обмену минут
@@ -486,7 +521,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="faq__item item">
+                <div class="faq__item item js-gtm-event" data-event="faq4">
                   <div class="item__header">
                     <div class="item__title subtitle">
                       На&nbsp;каких тарифах доступен обмен минут на&nbsp;билеты
@@ -508,7 +543,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="faq__item item">
+                <div class="faq__item item js-gtm-event" data-event="faq5">
                   <div class="item__header">
                     <div class="item__title subtitle">
                       Какие минуты можно обменять на&nbsp;билеты в&nbsp;музеи?
@@ -557,27 +592,17 @@
           <div class="modal-box__body">
             <div class="items-content region-list__all">
               <ul class="region-list__group">
-                <li class="js-set-city" data-area="siteMSK">
-                  Москва
-                </li>
-                <li class="js-set-city" data-area="siteSPB">
-                  Санкт-Петербург
-                </li>
+                <li class="js-set-city" data-area="siteMSK">Москва</li>
+                <li class="js-set-city" data-area="siteSPB">Санкт-Петербург</li>
                 <li class="js-set-city" data-area="siteNNOV">
                   Нижний Новгород
                 </li>
-                <li class="js-set-city" data-area="siteKAZAN">
-                  Казань
-                </li>
-                <li class="js-set-city" data-area="siteEKT">
-                  Екатеринбург
-                </li>
+                <li class="js-set-city" data-area="siteKAZAN">Казань</li>
+                <li class="js-set-city" data-area="siteEKT">Екатеринбург</li>
                 <li class="js-set-city" data-area="siteKRASNOYARSK">
                   Красноярск
                 </li>
-                <li class="js-set-city" data-area="siteTULA">
-                  Тула
-                </li>
+                <li class="js-set-city" data-area="siteTULA">Тула</li>
                 <li class="js-set-city" data-area="siteKAZAN">Казань</li>
               </ul>
             </div>
