@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
   createSlider();
   handleRegionModal();
   chooseRegion();
-  scrollTeaser(document.querySelector('.teaser-next'));
+  scrollTeaser(document.querySelector('.section--about'));
 });
 
 function goNextSection() {
