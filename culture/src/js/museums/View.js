@@ -19,17 +19,14 @@ class View {
 
   render() {
     let markSrc = require('../../img/icons/location.svg');
-    const btnPrevImg = require('../../img/icons/back.svg');
-
     if (markSrc.endsWith('/')) {
       markSrc = markSrc.slice(0, -1);
     }
-    console.log(markSrc);
+
     return html`
-    <div class="swiper-wrapper">
+
       ${this.dataArray.map((it, index) => html`
-      <div class="swiper-slide" data-hash="slide${index}">
-        <div class="slide">
+      <div class="swiper-slide slide">
           <div class="slide__text">
             <h3 class="slide__title">${it.title}</h3>
             <p class="slide__text">
@@ -45,7 +42,7 @@ class View {
             >Получить билет</a
             >
             <div class="slide__map map link">
-              <img alt="" src=${markSrc}/>
+              <img alt="" src=${markSrc.endsWith('/') ? markSrc.slice(0, -1) : markSrc}/>
               <a
                 class="map__link"
                 data-event="address"
@@ -55,19 +52,8 @@ class View {
               >
             </div>
           </div>
-        </div>
       </div>
       `)}
-    </div>
-    <div class="swiper-controls">
-      <div class="swiper-button-prev">
-        <img src=${btnPrevImg.endsWith('/') ? btnPrevImg.slice(0, -1) : btnPrevImg} alt="" />
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next">
-        <img src=${btnPrevImg.endsWith('/') ? btnPrevImg.slice(0, -1) : btnPrevImg} alt="" />
-      </div>
-    </div>
    `;
   }
 }

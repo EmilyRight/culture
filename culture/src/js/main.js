@@ -1,16 +1,17 @@
-import $ from 'jquery';
 import { WOW } from './vendor/wow.min';
 import detectDevice from './components/detectDevice';
 
 import GTMEvents from './components/gtmEvents';
-import createSlider from './components/sliderFunctions';
+import { createSlider } from './components/sliderFunctions';
 import { chooseRegion, handleRegionModal, showRegion } from './components/regionFunctions';
+import videoTeaser from './components/videoTeaser';
 
 const GTM = new GTMEvents();
 
 /// /////// DocReady //////////
 window.addEventListener('load', () => {
-  detectDevice(); // videoTeaser();
+  detectDevice();
+  videoTeaser();
   new WOW().init();
   handleFaqOpening();
   GTM.addEventListeners();

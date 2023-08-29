@@ -57,11 +57,12 @@
   }
   .slider {
     .swiper-slide {
+
+    }
+    .slide {
       max-width: 32rem;
       min-height: 36rem;
       border-radius: 18px;
-    }
-    .slide {
       padding: 2.8rem 2.4rem;
       position: relative;
       display: flex;

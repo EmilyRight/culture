@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import regionsData from '../constants/regionsData';
 import { closeModal, openModal } from './modal';
-import createSlider from './sliderFunctions';
+import { createSlider, destroySlider } from './sliderFunctions';
 
 function showRegion() {
   const id = localStorage.getItem('siteId') || 'siteMSK';
@@ -25,6 +25,7 @@ function chooseRegion() {
       setRegion(cityCode);
       showRegion();
       closeModal('#region-modal-box');
+      destroySlider();
       createSlider();
     });
   });
