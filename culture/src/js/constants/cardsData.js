@@ -27,13 +27,6 @@ const cardsData = [
     adress: 'https://yandex.ru/maps/-/CDQjIHiN',
   },
 
-  {
-    cityId: 'siteMSK',
-    title: 'Пушкинский музей',
-    description: 'Экспонаты постоянной экспозиции Главного здания.',
-    adress: 'https://yandex.ru/maps/-/CXXKrmB',
-  },
-
   // spb
 
   {
