@@ -13,9 +13,8 @@ const options = {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  mousewheel: {
-    invert: true,
-  },
+  mousewheel: false,
+  grabCursor: true,
   slidesPerView: 'auto',
   spaceBetween: 24,
   loop: false,
