@@ -54,6 +54,7 @@ function hideNavButtons(view) {
   }
   if (window.innerWidth < 600) {
     if (sliderElementsNumber === 1) {
+      console.log('hey');
       pagination.style.display = 'none';
     } else {
       pagination.style.display = 'block';

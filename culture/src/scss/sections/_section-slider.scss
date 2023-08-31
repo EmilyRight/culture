@@ -9,14 +9,19 @@
   }
   .section-bg {
     position: absolute;
-    bottom: 2rem;
-    right: -20%;
-    min-width: 40rem;
+    bottom: -4rem;
+    right: -40%;
+    height: 90%;
+    overflow: hidden;
     pointer-events: none;
     user-select: none;
+    min-width: 46rem;
     img {
+      position: absolute;
       display: block;
-      max-width: 100%;
+      min-height: 100%;
+      bottom:0;
+      left: 0;
     }
   }
   .box-content {
@@ -57,9 +62,8 @@
     padding-top: 2.4rem;
   }
   .slider {
-
+    position: relative;
     .swiper-slide {
-
     }
     .slide {
       max-width: 32rem;
@@ -132,7 +136,11 @@
         line-height: 1.8rem; /* 138.462% */
         color: var(--gray-day-600, #65707b);
       }
+      &.siteTULA {
+        max-width: 100%;
+      }
     }
+
     .btn {
     }
   }
@@ -157,9 +165,16 @@
     .selected-region {
       order: 2;
     }
+    .slide {
+      &.siteTULA {
+        max-width: 100%;
+        flex-direction: row;
+        align-items: center;
+        min-height: auto;
+        padding: 4rem;
+      }
+    }
     .swiper-container {
-      // margin-left: -8%;
-      // margin-right: -8%;
       padding-left: 8%;
       padding-right: 8%;
     }
@@ -169,16 +184,9 @@
 
     .section-bg {
       position: absolute;
-      top: 15rem;
-      max-width: 40rem;
       right: 8rem;
       pointer-events: none;
       user-select: none;
-      img {
-        display: block;
-        max-width: 100%;
-        max-height: 100%;
-      }
     }
   }
 }

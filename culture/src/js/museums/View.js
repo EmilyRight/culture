@@ -25,7 +25,7 @@ class View {
     return html`
 
       ${this.dataArray.map((it, index) => html`
-      <div class="swiper-slide slide">
+      <div class="swiper-slide slide ${it.cityId}">
           <div class="slide__text">
             <h3 class="slide__title">${it.title}</h3>
             <p class="slide__text">
