@@ -34,7 +34,7 @@ class View {
           </div>
           <div class="slide__btns">
             <a
-            href="https://tele2.ru/minutes-management"
+            href="https://tele2.ru/minutes-management/museum"
             class="slide__btn btn btn-primary js-gtm-event"
             data-event="conv_offer${index + 1}"
             target="_blank"
